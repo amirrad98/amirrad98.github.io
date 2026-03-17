@@ -1,0 +1,262 @@
+:root {
+  --bg: #f5efe4;
+  --bg-strong: #eadfc9;
+  --surface: rgba(255, 251, 243, 0.76);
+  --surface-strong: #fff9ef;
+  --text: #1d1c19;
+  --muted: #5e574f;
+  --accent: #cd5c36;
+  --accent-dark: #9d3a1b;
+  --line: rgba(29, 28, 25, 0.12);
+  --shadow: 0 20px 60px rgba(87, 59, 29, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(205, 92, 54, 0.22), transparent 26%),
+    linear-gradient(180deg, #f7f1e7 0%, #f0e3cd 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 24px auto;
+}
+
+.hero,
+.section,
+.footer {
+  backdrop-filter: blur(14px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  min-height: 78vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.brand,
+.eyebrow,
+.card-tag,
+.step span {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.76rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.hero-copy {
+  max-width: 760px;
+  padding: 72px 0 28px;
+}
+
+.hero h1,
+.section h2 {
+  margin: 0;
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  line-height: 0.96;
+}
+
+.hero h1 {
+  font-size: clamp(3.6rem, 10vw, 7.4rem);
+}
+
+.section h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.lede {
+  max-width: 620px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 22px 0 0;
+}
+
+.hero-actions,
+.footer-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.button {
+  border-radius: 999px;
+  padding: 14px 20px;
+  border: 1px solid var(--line);
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.button:hover,
+.project-card a:hover,
+.footer-links a:hover,
+.nav-links a:hover {
+  transform: translateY(-2px);
+}
+
+.button.primary {
+  background: var(--accent);
+  color: #fff6ec;
+}
+
+.button.primary:hover {
+  background: var(--accent-dark);
+}
+
+.button.secondary {
+  background: var(--surface-strong);
+}
+
+.section,
+.footer {
+  margin-top: 22px;
+  padding: 28px;
+}
+
+.section-accent {
+  background:
+    linear-gradient(145deg, rgba(205, 92, 54, 0.1), rgba(255, 249, 239, 0.72)),
+    var(--surface);
+}
+
+.section-heading {
+  max-width: 680px;
+  margin-bottom: 26px;
+}
+
+.example-grid,
+.project-grid,
+.steps {
+  display: grid;
+  gap: 18px;
+}
+
+.example-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.steps {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card,
+.project-card,
+.step {
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 22px;
+}
+
+.card h3,
+.project-card h3 {
+  margin-top: 12px;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.card p,
+.project-card p,
+.step p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.card ul {
+  margin: 14px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.project-card a {
+  color: var(--accent-dark);
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .example-grid,
+  .project-grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 16px, 1120px);
+    margin: 8px auto 20px;
+  }
+
+  .hero,
+  .section,
+  .footer {
+    border-radius: 22px;
+    padding: 20px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-copy {
+    padding-top: 48px;
+  }
+}
