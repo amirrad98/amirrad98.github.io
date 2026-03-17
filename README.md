@@ -1,18 +1,17 @@
-# GitHub Pages Starter
+# Proto Projects
 
-This repo now includes:
+This repo publishes a GitHub Pages project index at the root domain and sub-projects under their own routes.
 
-- `docs/` for a static GitHub Pages site
-- `.github/workflows/deploy-pages.yml` for automatic deployment
+## Current structure
 
-## Publish
+- `docs/index.html` is the root project index
+- `docs/terminal-project/index.html` is an example sub-project page
+- `docs/styles.css` is the shared stylesheet
+- `.github/workflows/deploy-pages.yml` deploys the `docs/` directory
 
-1. Push the repository to GitHub.
-2. In the repository settings, open **Pages**.
-3. Set **Build and deployment** to **GitHub Actions**.
-4. Push to the `main` branch to trigger deployment.
+## Add another sub-project
 
-## Edit the page
-
-- Update `docs/index.html` for content
-- Update `docs/styles.css` for design
+1. Create a new folder under `docs/`, for example `docs/my-app/`.
+2. Add an `index.html` file inside that folder.
+3. Add the slug to the `projects` array in `docs/index.html`.
+4. Push to `main` and GitHub Pages will publish it at `/my-app/`.
