@@ -10,6 +10,15 @@ This repo publishes a GitHub Pages project index at the root domain and sub-proj
 - `docs/styles.css` is the shared stylesheet
 - `.github/workflows/deploy-pages.yml` deploys the `docs/` directory
 
+## Published project routes
+
+- `/gym/`
+- `/Maps/`
+- `/Terminal/`
+- `/terminal-project/` (redirects to `www.amrad.ca`)
+- `/text-to-protein-classroom/`
+- `/Xray-skill/`
+
 ## Add another sub-project
 
 1. Create a new folder under `docs/`, for example `docs/my-app/`.
