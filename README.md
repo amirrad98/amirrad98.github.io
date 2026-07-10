@@ -5,7 +5,8 @@ This repo publishes a GitHub Pages project index at the root domain and sub-proj
 ## Current structure
 
 - `docs/index.html` is the root project index
-- `docs/terminal-project/index.html` is an example sub-project page
+- `docs/projects/terminal-project/index.html` is the published Terminal Project page
+- `docs/terminal-project/index.html` is retained for repository history; GitHub Pages reserves that top-level route for the separate `terminal-project` repository
 - `docs/styles.css` is the shared stylesheet
 - `.github/workflows/deploy-pages.yml` deploys the `docs/` directory
 

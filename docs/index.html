@@ -1,77 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proto Projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proto — Small tools by Amir</title>
     <meta
       name="description"
-      content="An index of sub-projects published under proto.amrad.ca."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      content="A small collection of useful experiments, tools, and half-finished ideas by Amir."
+    >
+    <meta name="theme-color" content="#f2efe7">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=Manrope:wght@400;500;600&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;display=swap"
       rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
+    >
+    <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <div class="page-shell">
-      <header class="hero hero-compact">
-        <p class="eyebrow">proto.amrad.ca</p>
-        <h1>Project index</h1>
-        <p class="lede">
-          A simple landing page for every sub-project hosted on this domain.
-        </p>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="wordmark" href="/" aria-label="Proto home">
+          <span class="wordmark-mark">P/</span>
+          <span>proto</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+        </nav>
+        <p class="edition">Vol. 01&nbsp;&nbsp;—&nbsp;&nbsp;2026</p>
       </header>
 
-      <main class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Projects</p>
-          <h2>Available sub-projects</h2>
-          <p class="section-copy">
-            Add a new folder under <code>docs/</code> and then add its slug here.
-          </p>
-        </div>
+      <main>
+        <section class="intro" aria-labelledby="intro-title">
+          <p class="kicker">A small workshop on the web</p>
+          <h1 id="intro-title">Things I make to solve my own problems.</h1>
+          <div class="intro-note">
+            <span aria-hidden="true">↳</span>
+            <p>
+              Tools, experiments, and working ideas. Some are practical.
+              Some are just here because I wanted to see if they could exist.
+            </p>
+          </div>
+        </section>
 
-        <div id="project-list" class="project-list"></div>
-      </main>
-    </div>
+        <section class="project-section" id="work" aria-labelledby="work-title">
+          <div class="section-label">
+            <h2 id="work-title">Current projects</h2>
+            <p>02 things, for now</p>
+          </div>
 
-    <script>
-      const baseUrl = "https://proto.amrad.ca";
-      const projects = [
-        {
-          slug: "gym",
-          name: "Gym Tracker",
-          description: "Daily gym log with check-ins, workout entries, streaks, and local browser storage fallback.",
-        },
-        {
-          slug: "terminal-project",
-          name: "Terminal Project",
-          description: "Starter example project page published under its own route.",
-        },
-      ];
-
-      const projectList = document.getElementById("project-list");
-
-      projectList.innerHTML = projects
-        .map((project) => {
-          const href = `${baseUrl}/${project.slug}/`;
-
-          return `
-            <article class="project-row">
-              <div>
-                <p class="project-slug">/${project.slug}/</p>
-                <h3>${project.name}</h3>
-                <p class="project-description">${project.description}</p>
+          <div class="project-list">
+            <article class="project project-gym">
+              <div class="project-number" aria-hidden="true">01</div>
+              <div class="project-copy">
+                <p class="project-type">Utility / Training</p>
+                <h3>Gym Tracker</h3>
+                <p>
+                  A no-fuss daily training log for check-ins, workouts, and
+                  streaks. Your data stays in your browser.
+                </p>
+                <a class="project-link" href="/gym/">
+                  Open Gym Tracker <span aria-hidden="true">↗</span>
+                </a>
               </div>
-              <a class="button primary" href="${href}">Open project</a>
+              <div class="project-visual gym-visual" aria-hidden="true">
+                <div class="log-sheet">
+                  <p>THIS WEEK</p>
+                  <div class="log-row"><span>M</span><i></i><b>✓</b></div>
+                  <div class="log-row"><span>T</span><i></i><b>✓</b></div>
+                  <div class="log-row"><span>W</span><i></i><b>—</b></div>
+                  <div class="log-row"><span>T</span><i></i><b>✓</b></div>
+                  <div class="log-row"><span>F</span><i></i><b></b></div>
+                </div>
+                <span class="visual-note">keep showing up</span>
+              </div>
             </article>
-          `;
-        })
-        .join("");
-    </script>
+
+            <article class="project project-terminal">
+              <div class="project-number" aria-hidden="true">02</div>
+              <div class="project-copy">
+                <p class="project-type">Experiment / Interface</p>
+                <h3>Terminal Project</h3>
+                <p>
+                  A compact terminal-flavoured project page and a place for
+                  command-line ideas to find a home.
+                </p>
+                <a class="project-link" href="/projects/terminal-project/">
+                  Open Terminal Project <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+              <div class="project-visual terminal-visual" aria-hidden="true">
+                <div class="terminal-card">
+                  <p><span>amir@proto</span> ~ % ls</p>
+                  <p>ideas.txt</p>
+                  <p>work-in-progress/</p>
+                  <p class="cursor-line"><span>amir@proto</span> ~ % <i></i></p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="about" id="about" aria-labelledby="about-title">
+          <p class="kicker">About this place</p>
+          <div>
+            <h2 id="about-title">A shelf for small internet projects.</h2>
+            <p>
+              Proto is where I keep useful side projects before they grow into
+              something bigger—or remain pleasantly small. Everything here is
+              built to be used, changed, and learned from.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Made by Amir, somewhere between an idea and a working version.</p>
+        <a href="https://github.com/amirrad98" rel="me">GitHub ↗</a>
+        <a href="#top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Back to top ↑</a>
+      </footer>
+    </div>
   </body>
 </html>
