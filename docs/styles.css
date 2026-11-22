@@ -688,6 +688,8 @@ a:focus-visible {
   background-size: 24px 24px;
 }
 
+.recaptcha-visual { color: #194632; background: #c8d9c9; }
+
 .xray-visual {
   color: #e9e6dc;
   background-color: #343b47;

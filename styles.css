@@ -114,6 +114,8 @@ a:focus-visible { outline: 2px solid var(--red); outline-offset: 5px; }
 .project .terminal-visual { color: #e9e6dc; background: var(--terminal); }
 .portfolio-visual { color: #eeeae0; background: #bd513c; }
 .protein-visual { background-color: #cbc0d0; background-image: linear-gradient(135deg, transparent 45%, rgba(23, 23, 20, 0.13) 46% 47%, transparent 48%); background-size: 24px 24px; }
+.recaptcha-visual { color: #194632; background: #c8d9c9; }
+
 .xray-visual { color: #e9e6dc; background-color: #343b47; background-image: linear-gradient(90deg, transparent 49%, rgba(233, 230, 220, 0.09) 50% 51%, transparent 52%); background-size: 32px 100%; }
 .project .project-copy { display: flex; flex: 1; flex-direction: column; align-self: stretch; max-width: none; padding: 0; }
 .project h3 { margin-bottom: 12px; font-size: clamp(2.25rem, 4vw, 3.4rem); }

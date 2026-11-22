@@ -18,6 +18,7 @@ This repo publishes a GitHub Pages project index at the root domain and sub-proj
 - `/terminal-project/` (redirects to `www.amrad.ca`)
 - `/text-to-protein-classroom/`
 - `/Xray-skill/`
+- `/recaptcha-v3/`
 
 ## Add another sub-project
 

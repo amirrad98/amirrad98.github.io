@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" data-config="./config.json">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Run a live reCAPTCHA v3 check and see its verified score, action, and hostname.">
+    <title>Try reCAPTCHA v3 · Proto</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <a class="home-link" href="/#work">← Proto projects</a>
+      <h1>Try reCAPTCHA v3</h1>
+      <p class="intro">Run a check to see how Google scores a button press on <code id="site-host">proto.amrad.ca</code>.</p>
+      <button id="run" type="button" disabled>Run check</button>
+      <p id="status" role="status" aria-live="polite" aria-atomic="true">Loading settings…</p>
+      <dl id="result" hidden aria-label="Verified details">
+        <div><dt>Google score</dt><dd id="score"></dd></div>
+        <div><dt>Action</dt><dd id="action"></dd></div>
+        <div><dt>Hostname</dt><dd id="hostname"></dd></div>
+      </dl>
+      <noscript>Enable JavaScript to run reCAPTCHA in this browser.</noscript>
+    </main>
+  </body>
+</html>
